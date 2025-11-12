@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tech Revival Repair Hub — UI Mockups</title>
+<style>
+  :root{
+    --bg:#222629; --bg2:#1f2937; --muted:#374151; --panel:#2b3036; --text:#e5e7eb; --brand:#86C232; --accent:#61892F; --ink:#6B6E70; --warn:#5a1a1a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica Neue,Arial;background:var(--bg);color:var(--text)}
+  .nav{display:flex;gap:.75rem;align-items:center;padding:14px 18px;background:var(--bg2);border-bottom:1px solid var(--muted);position:sticky;top:0;z-index:5}
+  .nav a{color:var(--brand);text-decoration:none;padding:8px 12px;border-radius:10px}
+  .nav a.active,.nav a:hover{background:var(--panel)}
+  .nav .spacer{flex:1}
+  main{padding:22px;max-width:1200px;margin:0 auto}
+  h1{margin:0 0 14px;font-size:1.6rem;color:var(--brand)}
+  h2{margin:.25rem 0 10px;font-size:1.1rem;color:var(--text)}
+  .card{background:var(--panel);border:1px solid var(--muted);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .grid{display:grid;gap:14px}
+  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  label{display:block;margin:6px 0 6px;font-size:.95rem;color:#d5d7db}
+  input,select,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--ink);background:#474B4F;color:#fff}
+  textarea{min-height:88px}
+  button,.btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 14px;background:var(--accent);border:0;border-radius:12px;color:white;cursor:pointer;transition:transform .12s ease, filter .12s ease}
+  button:hover,.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--muted)}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--muted);overflow:hidden;border-radius:14px}
+  thead th{background:#2a3036;text-align:left;padding:12px;border-bottom:1px solid var(--muted);font-weight:600}
+  tbody td{padding:12px;border-bottom:1px solid var(--muted)}
+  tr:hover td{background:#2a3238;transition:background .12s ease}
+  .pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.85rem;border:1px solid var(--muted);background:#2f353b}
+  .pill.ready{color:#b6f0b2;border-color:#3f6;}
+  .pill.progress{color:#f5d487;border-color:#e6b800}
+  .pill.await{color:#f2a3a3;border-color:#f06}
+  .muted{color:#c9cacc}
+  .warn{background:var(--warn)}
+  .toolbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:12px}
+  .status-chip{padding:6px 10px;border-radius:12px;border:1px solid var(--muted)}
+  .kpi{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid var(--muted);border-radius:14px;background:#2b3238}
+  .kpi .big{font-size:1.6rem;font-weight:700}
+  .right{justify-self:end}
+  .footer{opacity:.6;margin-top:14px;font-size:.9rem}
+  .hidden{display:none}
+  .qr-preview{display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px dashed var(--muted);border-radius:12px;padding:12px;margin-top:10px}
+  .qr-preview img{width:120px;height:120px;margin-bottom:6px}
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo" aria-label="Tech Revival Repair Hub">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.2 5h5.3l-4.3 3.2 1.7 5.2L12 14.4 7.1 15.4l1.7-5.2L4.5 7h5.3L12 2z"/></svg>
+      <strong>Tech Revival</strong> <span class="sub">Repair Hub</span>
+    </div>
+    <a href="#login" data-page="login" class="active">Login</a>
+    <a href="#tickets" data-page="tickets">Tickets</a>
+    <a href="#new" data-page="new">New Ticket</a>
+    <a href="#inventory" data-page="inventory">Inventory</a>
+    <a href="#reports" data-page="reports">Reports</a>
+    <div class="spacer"></div>
+    <a href="#" class="btn ghost" title="Mock action">Logout</a>
+  </nav>
+
+  <main>
+    <!-- TICKET DETAIL -->
+    <section id="page-detail" class="page">
+      <div class="grid grid-2">
+        <div class="card">
+          <h1>Ticket #1024 <span class="pill progress">in_progress</span></h1>
+          <div class="grid grid-2">
+            <div>
+              <h2>Customer</h2>
+              <div class="muted">Jordan Lee • (555) 321‑9988 • jordan@example.com</div>
+            </div>
+            <div class="right">
+              <h2>Store</h2>
+              <div class="muted">Computer Corner — Madison</div>
+            </div>
+          </div>
+          <hr style="border:0;border-top:1px solid var(--muted);margin:12px 0"/>
+          <div class="grid grid-3">
+            <div class="kpi"><span class="muted">Labor Hours</span><span class="big">1.5</span></div>
+            <div class="kpi"><span class="muted">Labor Rate</span><span class="big">$80</span></div>
+            <div class="kpi"><span class="muted">Parts Cost</span><span class="big">$49</span></div>
+          </div>
+          <form class="grid grid-3" style="margin-top:12px">
+            <div>
+              <label>Status</label>
+              <select><option>intake</option><option selected>in_progress</option><option>awaiting_parts</option><option>ready</option><option>picked_up</option><option>canceled</option></select>
+            </div>
+            <div>
+              <label>Labor Hours</label>
+              <input type="number" step="0.1" value="1.5" />
+            </div>
+            <div>
+              <label>Labor Rate</label>
+              <input type="number" step="0.01" value="80" />
+            </div>
+            <div>
+              <label>Parts Cost</label>
+              <input type="number" step="0.01" value="49" />
+            </div>
+            <div style="align-self:end"><button type="button">Save Changes</button></div>
+          </form>
+          <div class="footer">Grand Total: <strong>$169.00</strong></div>
+          <div style="margin-top:16px;display:flex;flex-direction:column;align-items:flex-start;gap:8px">
+            <button type="button" class="btn ghost" onclick="toggleQR()">🖨️ Print QR Code</button>
+            <div id="qr-area" class="qr-preview hidden">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://repairhub.techrevival.pro/tickets/1024&size=120x120" alt="QR Code to Ticket" />
+              <div class="muted">Scan to open Ticket #1024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script>
+  function toggleQR(){
+    const q=document.getElementById('qr-area');
+    q.classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>
