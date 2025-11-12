@@ -1,66 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tech Revival Repair Hub — UI Mockups</title>
-<style>
-  :root{
-    --bg:#222629; --bg2:#1f2937; --muted:#374151; --panel:#2b3036; --text:#e5e7eb; --brand:#86C232; --accent:#61892F; --ink:#6B6E70; --warn:#5a1a1a;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica Neue,Arial;background:var(--bg);color:var(--text)}
-  .nav{display:flex;gap:.75rem;align-items:center;padding:14px 18px;background:var(--bg2);border-bottom:1px solid var(--muted);position:sticky;top:0;z-index:5}
-  .nav a{color:var(--brand);text-decoration:none;padding:8px 12px;border-radius:10px}
-  .nav a.active,.nav a:hover{background:var(--panel)}
-  .nav .spacer{flex:1}
-  main{padding:22px;max-width:1200px;margin:0 auto}
-  h1{margin:0 0 14px;font-size:1.6rem;color:var(--brand)}
-  h2{margin:.25rem 0 10px;font-size:1.1rem;color:var(--text)}
-  .card{background:var(--panel);border:1px solid var(--muted);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-  .grid{display:grid;gap:14px}
-  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-  label{display:block;margin:6px 0 6px;font-size:.95rem;color:#d5d7db}
-  input,select,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--ink);background:#474B4F;color:#fff}
-  textarea{min-height:88px}
-  button,.btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 14px;background:var(--accent);border:0;border-radius:12px;color:white;cursor:pointer}
-  button:hover,.btn:hover{filter:brightness(1.08)}
-  .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--muted)}
-  table{width:100%;border-collapse:collapse;border:1px solid var(--muted);overflow:hidden;border-radius:14px}
-  thead th{background:#2a3036;text-align:left;padding:12px;border-bottom:1px solid var(--muted);font-weight:600}
-  tbody td{padding:12px;border-bottom:1px solid var(--muted)}
-  tr:hover td{background:#2a3238}
-  .pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.85rem;border:1px solid var(--muted);background:#2f353b}
-  .pill.ready{color:#b6f0b2;border-color:#3f6;}
-  .pill.progress{color:#f5d487;border-color:#e6b800}
-  .pill.await{color:#f2a3a3;border-color:#f06}
-  .muted{color:#c9cacc}
-  .warn{background:var(--warn)}
-  .toolbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:12px}
-  .status-chip{padding:6px 10px;border-radius:12px;border:1px solid var(--muted)}
-  .kpi{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid var(--muted);border-radius:14px;background:#2b3238}
-  .kpi .big{font-size:1.6rem;font-weight:700}
-  .right{justify-self:end}
-  .footer{opacity:.6;margin-top:14px;font-size:.9rem}
-  .hidden{display:none}
-.logo{display:flex;align-items:center;gap:.5rem;margin-right:.5rem}
-.logo svg{width:24px;height:24px;fill:var(--brand)}
-.logo .sub{opacity:.7;font-weight:500;margin-left:.25rem}
-/* Hover polish */
-.btn,button{transition:transform .12s ease, filter .12s ease}
-.btn:hover,button:hover{transform:translateY(-1px)}
-tr{transition:background .12s ease}
-/* Badges */
-.badge{display:inline-block;margin-left:.4rem;padding:2px 8px;border-radius:999px;font-size:.72rem;border:1px solid var(--muted);background:#2f353b}
-.badge.low{border-color:#e6b800;color:#f5d487}
-/* Accessible low‑stock icon */
-.warn-ico{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;border:1px solid #e6b800;margin-right:.35rem;font-size:.75rem}
-/* Page transitions */
-@keyframes fadeSlide{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.fade-in{animation:fadeSlide .22s ease both}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Revival Repair Hub — Demo UI</title>
+  <style>
+    :root{
+      --bg:#222629; --bg2:#1f2937; --muted:#374151; --panel:#2b3036; --text:#e5e7eb; --brand:#86C232; --accent:#61892F; --ink:#6B6E70; --warn:#5a1a1a;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial;background:var(--bg);color:var(--text)}
+    a{color:inherit}
+    .nav{display:flex;gap:.75rem;align-items:center;padding:14px 18px;background:var(--bg2);border-bottom:1px solid var(--muted);position:sticky;top:0;z-index:5}
+    .nav a{color:var(--brand);text-decoration:none;padding:8px 12px;border-radius:10px}
+    .nav a.active,.nav a:hover{background:var(--panel)}
+    .spacer{flex:1}
+    main{padding:22px;max-width:1200px;margin:0 auto}
+    h1{margin:0 0 14px;font-size:1.6rem;color:var(--brand)}
+    h2{margin:.25rem 0 10px;font-size:1.1rem;color:var(--text)}
+    .card{background:var(--panel);border:1px solid var(--muted);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .grid{display:grid;gap:14px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    label{display:block;margin:6px 0 6px;font-size:.95rem;color:#d5d7db}
+    input,select,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--ink);background:#474B4F;color:#fff}
+    textarea{min-height:88px}
+    button,.btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 14px;background:var(--accent);border:0;border-radius:12px;color:white;cursor:pointer;transition:transform .12s ease,filter .12s ease}
+    button:hover,.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+    .btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--muted)}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--muted);overflow:hidden;border-radius:14px}
+    thead th{background:#2a3036;text-align:left;padding:12px;border-bottom:1px solid var(--muted);font-weight:600}
+    tbody td{padding:12px;border-bottom:1px solid var(--muted)}
+    tr{transition:background .12s ease}
+    tr:hover td{background:#2a3238}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.85rem;border:1px solid var(--muted);background:#2f353b}
+    .pill.ready{color:#b6f0b2;border-color:#3f6}
+    .pill.progress{color:#f5d487;border-color:#e6b800}
+    .pill.await{color:#f2a3a3;border-color:#f06}
+    .muted{color:#c9cacc}
+    .warn{background:var(--warn)}
+    .toolbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:12px}
+    .kpi{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid var(--muted);border-radius:14px;background:#2b3238}
+    .kpi .big{font-size:1.6rem;font-weight:700}
+    .right{justify-self:end}
+    .footer{opacity:.7;margin-top:14px;font-size:.9rem}
+    .hidden{display:none}
+    .logo{display:flex;align-items:center;gap:.5rem;margin-right:.5rem}
+    .logo svg{width:24px;height:24px;fill:var(--brand)}
+    .logo .sub{opacity:.7;font-weight:500;margin-left:.25rem}
+    .badge{display:inline-block;margin-left:.4rem;padding:2px 8px;border-radius:999px;font-size:.72rem;border:1px solid var(--muted);background:#2f353b}
+    .badge.low{border-color:#e6b800;color:#f5d487}
+    .warn-ico{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;border:1px solid #e6b800;margin-right:.35rem;font-size:.75rem}
+    @keyframes fadeSlide{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    .fade-in{animation:fadeSlide .22s ease both}
 
-</style>
+    /* PRINT: show only the QR label area */
+    @media print{
+      body *{visibility:hidden !important}
+      #qr-print, #qr-print *{visibility:visible !important}
+      #qr-print{position:absolute;left:0;top:0;width:4in;height:6in;padding:.35in;background:white;color:black}
+      .qr-label{display:flex;flex-direction:column;gap:.2in;align-items:center;justify-content:center;height:100%;border:1px dashed #000;border-radius:.1in;padding:.2in}
+      .qr-label h3{margin:0;font-size:16pt}
+      .qr-label .meta{font-size:11pt}
+    }
+  </style>
 </head>
 <body>
   <nav class="nav">
@@ -74,7 +78,7 @@ tr{transition:background .12s ease}
     <a href="#inventory" data-page="inventory">Inventory</a>
     <a href="#reports" data-page="reports">Reports</a>
     <div class="spacer"></div>
-    <a href="#" class="btn ghost" title="Mock action">Logout</a>
+    <a href="#" class="btn ghost" title="Demo">Logout</a>
   </nav>
 
   <main>
@@ -94,19 +98,19 @@ tr{transition:background .12s ease}
               <input type="password" placeholder="••••••••" />
             </div>
             <div>
-              <button type="button">Sign in</button>
+              <button type="button" onclick="show('tickets')">Sign in (demo)</button>
             </div>
           </form>
-          <div class="footer">Tip: Roles supported — Admin, Manager, Tech</div>
+          <div class="footer">Roles: Admin, Manager, Tech</div>
         </div>
         <div class="card">
-          <h2>Multi‑Store Access</h2>
-          <p class="muted">Computer Corner — Madison, Appleton, Oshkosh, Green Bay</p>
+          <h2>Multi-store Access</h2>
+          <p class="muted">Computer Corner: Madison, Appleton, Oshkosh, Green Bay</p>
           <ul>
-            <li>• Centralized ticket board</li>
-            <li>• Inventory per location</li>
-            <li>• Low‑stock alerts</li>
-            <li>• Exportable reports</li>
+            <li>Centralized ticket board</li>
+            <li>Inventory per location</li>
+            <li>Low-stock alerts</li>
+            <li>Exportable reports</li>
           </ul>
         </div>
       </div>
@@ -116,14 +120,14 @@ tr{transition:background .12s ease}
     <section id="page-tickets" class="page hidden">
       <div class="card">
         <div class="toolbar">
-          <select>
+          <select aria-label="Store filter">
             <option>All Stores</option>
             <option>Computer Corner — Madison</option>
             <option>Appleton</option>
             <option>Oshkosh</option>
             <option>Green Bay</option>
           </select>
-          <select>
+          <select aria-label="Status filter">
             <option>Status: Any</option>
             <option>intake</option>
             <option>in_progress</option>
@@ -139,7 +143,7 @@ tr{transition:background .12s ease}
           <tbody>
             <tr>
               <td><a href="#detail" data-page="detail">#1024</a></td>
-              <td>2025‑11‑11</td>
+              <td>2025-11-11</td>
               <td>Jordan Lee</td>
               <td>iPhone 12 Pro</td>
               <td><span class="pill progress">in_progress</span></td>
@@ -147,7 +151,7 @@ tr{transition:background .12s ease}
             </tr>
             <tr>
               <td><a href="#detail" data-page="detail">#1023</a></td>
-              <td>2025‑11‑10</td>
+              <td>2025-11-10</td>
               <td>Avery Kim</td>
               <td>Switch OLED</td>
               <td><span class="pill await">awaiting_parts</span></td>
@@ -155,7 +159,7 @@ tr{transition:background .12s ease}
             </tr>
             <tr>
               <td><a href="#detail" data-page="detail">#1022</a></td>
-              <td>2025‑11‑10</td>
+              <td>2025-11-10</td>
               <td>Carlos M.</td>
               <td>Galaxy S22</td>
               <td><span class="pill ready">ready</span></td>
@@ -203,7 +207,7 @@ tr{transition:background .12s ease}
             <textarea placeholder="Describe the issue, visible damage, passcode…"></textarea>
           </div>
           <div>
-            <button type="button">Create Ticket</button>
+            <button type="button" onclick="show('detail')">Create Ticket (demo)</button>
           </div>
         </form>
       </div>
@@ -217,14 +221,14 @@ tr{transition:background .12s ease}
           <div class="grid grid-2">
             <div>
               <h2>Customer</h2>
-              <div class="muted">Jordan Lee • (555) 321‑9988 • jordan@example.com</div>
+              <div class="muted">Jordan Lee • (555) 321-9988 • jordan@example.com</div>
             </div>
             <div class="right">
               <h2>Store</h2>
               <div class="muted">Computer Corner — Madison</div>
             </div>
           </div>
-          <hr style="border:0;border-top:1px solid var(--muted);margin:12px 0"/>
+          <hr style="border:0;border-top:1px solid var(--muted);margin:12px 0" />
           <div class="grid grid-3">
             <div class="kpi"><span class="muted">Labor Hours</span><span class="big">1.5</span></div>
             <div class="kpi"><span class="muted">Labor Rate</span><span class="big">$80</span></div>
@@ -249,14 +253,29 @@ tr{transition:background .12s ease}
             </div>
             <div style="align-self:end"><button type="button">Save Changes</button></div>
           </form>
-          <div class="footer">Grand Total: <strong>$169.00</strong></div>
+
+          <!-- QR actions -->
+          <div style="margin-top:16px;display:flex;flex-direction:column;align-items:flex-start;gap:8px">
+            <button type="button" class="btn ghost" onclick="toggleQRandPrint()">Print QR Code</button>
+            <div id="qr-preview" class="card hidden" style="background:#1e2227;border-style:dashed">
+              <div style="display:flex;align-items:center;gap:14px">
+                <img id="qr-img" src="" alt="QR Code to Ticket" width="140" height="140" style="background:white;padding:6px;border-radius:8px" />
+                <div>
+                  <div class="muted">Scan to open ticket</div>
+                  <div><strong id="qr-ticket-id">Ticket #1024</strong></div>
+                  <div class="muted" id="qr-url" style="word-break:break-all"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="card">
           <h2>Parts Used</h2>
           <table>
             <thead><tr><th>SKU</th><th>Name</th><th>Qty</th><th>Cost</th></tr></thead>
             <tbody>
-              <tr><td>IP12‑GLASS‑BLK</td><td><span class="warn-ico" aria-hidden="true">!</span> iPhone 12 Glass/LCD Black <span class="badge low" role="img" aria-label="Low stock">LOW</span></td><td>1</td><td>$49.00</td></tr>
+              <tr><td>IP12-GLASS-BLK</td><td><span class="warn-ico" aria-hidden="true">!</span> iPhone 12 Glass/LCD Black <span class="badge low" role="img" aria-label="Low stock">LOW</span></td><td>1</td><td>$49.00</td></tr>
             </tbody>
           </table>
           <div style="margin-top:10px"><a class="btn ghost" href="#">+ Add Part</a></div>
@@ -276,20 +295,20 @@ tr{transition:background .12s ease}
           <thead><tr><th>SKU</th><th>Name</th><th>Qty</th><th>Reorder @</th><th>Unit Cost</th><th></th></tr></thead>
           <tbody>
             <tr class="warn">
-              <td>IP12‑GLASS‑BLK</td><td>iPhone 12 Glass/LCD Black</td><td>1</td><td>2</td><td>$45.00</td>
+              <td>IP12-GLASS-BLK</td><td>iPhone 12 Glass/LCD Black</td><td>1</td><td>2</td><td>$45.00</td>
               <td><a class="btn" href="#">Update</a></td>
             </tr>
             <tr>
-              <td>SW‑JOY‑R</td><td>Switch Right Joycon Stick</td><td>7</td><td>3</td><td>$6.50</td>
+              <td>SW-JOY-R</td><td>Switch Right Joycon Stick</td><td>7</td><td>3</td><td>$6.50</td>
               <td><a class="btn" href="#">Update</a></td>
             </tr>
             <tr>
-              <td>GAL‑S22‑BAT</td><td>Galaxy S22 Battery</td><td>3</td><td>3</td><td>$18.00</td>
+              <td>GAL-S22-BAT</td><td>Galaxy S22 Battery</td><td>3</td><td>3</td><td>$18.00</td>
               <td><a class="btn" href="#">Update</a></td>
             </tr>
           </tbody>
         </table>
-        <div class="footer">Low‑stock rows highlighted • Reorder list auto‑generates</div>
+        <div class="footer">Low-stock rows highlighted • Reorder list auto-generates</div>
       </div>
     </section>
 
@@ -305,44 +324,98 @@ tr{transition:background .12s ease}
         <table>
           <thead><tr><th>ID</th><th>Date</th><th>Store</th><th>Status</th><th>Total</th></tr></thead>
           <tbody>
-            <tr><td>#1024</td><td>2025‑11‑11</td><td>Madison</td><td>in_progress</td><td>$169.00</td></tr>
-            <tr><td>#1023</td><td>2025‑11‑10</td><td>Appleton</td><td>awaiting_parts</td><td>$89.00</td></tr>
-            <tr><td>#1022</td><td>2025‑11‑10</td><td>Green Bay</td><td>ready</td><td>$129.00</td></tr>
+            <tr><td>#1024</td><td>2025-11-11</td><td>Madison</td><td>in_progress</td><td>$169.00</td></tr>
+            <tr><td>#1023</td><td>2025-11-10</td><td>Appleton</td><td>awaiting_parts</td><td>$89.00</td></tr>
+            <tr><td>#1022</td><td>2025-11-10</td><td>Green Bay</td><td>ready</td><td>$129.00</td></tr>
           </tbody>
         </table>
         <div class="footer">Export CSV • Filter by store, tech, or date</div>
       </div>
     </section>
   </main>
+
+  <!-- PRINT-ONLY LABEL ROOT (hidden on screen) -->
+  <div id="qr-print" class="hidden" aria-hidden="true">
+    <div class="qr-label">
+      <div style="text-align:center">
+        <div style="font-weight:700;font-size:18pt">Tech Revival</div>
+        <div style="font-size:12pt">Repair Ticket</div>
+      </div>
+      <img id="qr-img-print" src="" alt="QR to ticket" width="240" height="240" style="background:white;padding:.1in;border-radius:.05in" />
+      <div class="meta">
+        <div id="print-ticket-id">Ticket #1024</div>
+        <div id="print-ticket-url" style="word-break:break-all"></div>
+      </div>
+    </div>
+  </div>
+
   <footer class="nav" style="justify-content:space-between;opacity:.85">
-    <div>© Tech Revival LLC • Build <code>v0.1.0</code></div>
+    <div>© Tech Revival LLC • Build <code>v0.1.1</code></div>
     <div class="muted">Dark theme • Madison, WI</div>
   </footer>
 
-<script>
-  const links=[...document.querySelectorAll('.nav a[data-page]')];
-  const pages={};
-  [...document.querySelectorAll('.page')].forEach(sec=>{pages[sec.id.replace('page-','')]=sec});
-  function show(page){
-    Object.values(pages).forEach(s=>{
-      s.classList.add('hidden');
-      s.classList.remove('fade-in');
+  <script>
+    // Simple hash-router for demo pages
+    const links = Array.from(document.querySelectorAll('.nav a[data-page]'));
+    const pages = {};
+    document.querySelectorAll('.page').forEach(sec => pages[sec.id.replace('page-','')] = sec);
+
+    function show(page){
+      Object.values(pages).forEach(s => { s.classList.add('hidden'); s.classList.remove('fade-in'); });
+      const target = pages[page] || pages['login'];
+      target.classList.remove('hidden');
+      void target.offsetWidth;
+      target.classList.add('fade-in');
+      links.forEach(a => a.classList.toggle('active', a.dataset.page === page));
+      if (location.hash !== '#' + page) history.replaceState(null, '', '#' + page);
+    }
+
+    links.forEach(a => a.addEventListener('click', e => { e.preventDefault(); show(a.dataset.page); }));
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[data-page]');
+      if(a && !links.includes(a)){ e.preventDefault(); show(a.dataset.page); }
     });
-    const target = (pages[page]||pages['login']);
-    target.classList.remove('hidden');
-    void target.offsetWidth; // force reflow for animation
-    target.classList.add('fade-in');
-    links.forEach(a=>a.classList.toggle('active',a.dataset.page===page));
-  }
-  links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();show(a.dataset.page)}));
-  // Also wire table ticket links
-  document.addEventListener('click',e=>{
-    const a=e.target.closest('a[data-page]');
-    if(a){ e.preventDefault(); show(a.dataset.page); }
-  });
-  // Initial
-  const hash=location.hash.replace('#','');
-  if(['login','tickets','new','inventory','reports','detail'].includes(hash)) show(hash); else show('login');
-</script>
+
+    const start = location.hash.replace('#','');
+    show(['login','tickets','new','detail','inventory','reports'].includes(start) ? start : 'login');
+
+    // --- QR PRINT LOGIC ---
+    const TICKET_ID = '1024';
+    const TICKET_URL = 'https://repairhub.techrevival.pro/tickets/' + TICKET_ID; // replace with real URL when backend is live
+
+    function toggleQRandPrint(){
+      const prev = document.getElementById('qr-preview');
+      const img = document.getElementById('qr-img');
+      const urlEl = document.getElementById('qr-url');
+      const idEl = document.getElementById('qr-ticket-id');
+      const printRoot = document.getElementById('qr-print');
+      const printImg = document.getElementById('qr-img-print');
+      const printId = document.getElementById('print-ticket-id');
+      const printUrl = document.getElementById('print-ticket-url');
+
+      const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(TICKET_URL);
+      img.src = qrUrl;
+      urlEl.textContent = TICKET_URL;
+      idEl.textContent = 'Ticket #' + TICKET_ID;
+      prev.classList.toggle('hidden');
+
+      // Prepare print-only area
+      printImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=' + encodeURIComponent(TICKET_URL);
+      printId.textContent = 'Ticket #' + TICKET_ID;
+      printUrl.textContent = TICKET_URL;
+
+      // Ensure image loads before printing
+      const goPrint = () => { printRoot.classList.remove('hidden'); setTimeout(() => window.print(), 100); };
+      if (printImg.complete) { goPrint(); } else { printImg.onload = goPrint; }
+
+      // After print, hide the print root so the screen view is normal
+      const afterPrint = () => { printRoot.classList.add('hidden'); };
+      if (window.matchMedia) {
+        const mq = window.matchMedia('print');
+        mq.addEventListener('change', (e) => { if (!e.matches) afterPrint(); });
+      }
+      window.onafterprint = afterPrint;
+    }
+  </script>
 </body>
 </html>
